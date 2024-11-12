@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "increased_wheat_drops",
+  "version": "${version}",
+  "name": "Increased Wheat Drops",
+  "description": "A simple mod which increases the amount of wheat which drops from a harvest",
+  "authors": ["TBBTLY"],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "com.increasedwheatdrops.client.Increased_wheat_dropsClient"
+    ],
+    "main": [
+      "com.increasedwheatdrops.increasedwheatdrops"
+    ]
+  },
+  "mixins": [
+    "increased_wheat_drops.mixins.json",
+    {
+      "config": "increased_wheat_drops.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
